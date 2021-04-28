@@ -2,6 +2,7 @@ package proiecteap;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.sql.Timestamp;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -56,4 +57,20 @@ public class DateService {
         return d;
     }
 
+    public void afisareDate (List<Date> dates) {
+        File file = new File("E:\\Fac\\Anul II\\Sem II\\Elemente Avansate de Programare\\Proiect\\dateout.csv");
+
+        try {
+            FileWriter fw = new FileWriter(file, true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter pw = new PrintWriter(bw);
+            for (Date d: dates)
+                pw.append(d.getZiua()+"."+d.getLuna()+"."+d.getAn()+"   "+d.getOra()+":"+d.getMinut()+":"+d.getSecunda()+"\n");
+            pw.flush();
+            pw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
+

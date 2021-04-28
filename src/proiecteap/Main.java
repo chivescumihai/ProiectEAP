@@ -100,14 +100,22 @@ public class Main {
  */
 
     //Test citire date din fisier
-    List<Date> testDate = new ArrayList<Date>();
+    List<Date> testDateIn = new ArrayList<Date>();
     String filepath = "E:\\Fac\\Anul II\\Sem II\\Elemente Avansate de Programare\\Proiect\\datein.csv";
-    testDate = dS.citireDate(filepath);
-        for (Date d:testDate)
+    testDateIn = dS.citireDate(filepath);
+        for (Date d:testDateIn)
         {
             d.showAll();
         }
 
+    //Test afisare date in fisier
+        List<Date> testDateOut = new ArrayList<Date>();
+        Date dOut1 = new Date (2021, 4, 13, 10, 0, 0);
+        Date dOut2 = new Date (2021, 5, 6, 15, 45, 30);
+        service.addDate(testDateOut, dOut1);
+        service.addDate(testDateOut, dOut2);
+
+        dS.afisareDate(testDateOut);
 
 
 

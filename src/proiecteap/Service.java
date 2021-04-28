@@ -75,6 +75,17 @@ public class Service {
             validare.validSpital(s);
     }
 
+    public void addDate(List<Date> v, Date d) throws IOException {
+        boolean dataOK = validare.validData(d);
+        if (dataOK == true)
+        {
+            v.add(d);
+            aS.scrie("addDate");
+        }
+        else
+            validare.validData(d);
+    }
+
     public void afisDoctori (Spital s) throws IOException {
         for (Sectie sectie: s.getSectii())
         {
