@@ -1,14 +1,15 @@
-package ProiectEAP;
+package proiecteap;
+import java.util.List;
 
 public class Spital {
     private String nume;
     private String adresa;
-    private Sectie [] sectii;
-    private Laborator [] laboratoare;
-    private Programare [] programari;
+    private List<Sectie> sectii;
+    private List<Laborator> laboratoare;
+    private List<Programare> programari;
 
 
-    public Spital(String nume, String adresa, Sectie[] sectii, Laborator[] laboratoare, Programare [] programari) {
+    public Spital(String nume, String adresa, List<Sectie> sectii, List<Laborator> laboratoare, List<Programare> programari) {
         this.nume = nume;
         this.adresa = adresa;
         this.sectii = sectii;
@@ -24,19 +25,19 @@ public class Spital {
         this.adresa = adresa;
     }
 
-    public Sectie[] getSectii() {
+    public List<Sectie> getSectii() {
         return sectii;
     }
 
-    public void setSectii(Sectie[] sectii) {
+    public void setSectii(List<Sectie> sectii) {
         this.sectii = sectii;
     }
 
-    public Laborator[] getLaboratoare() {
+    public List<Laborator> getLaboratoare() {
         return laboratoare;
     }
 
-    public void setLaboratoare(Laborator[] laboratoare) {
+    public void setLaboratoare(List<Laborator> laboratoare) {
         this.laboratoare = laboratoare;
     }
 
@@ -48,11 +49,11 @@ public class Spital {
         this.nume = nume;
     }
 
-    public Programare[] getProgramari() {
+    public List<Programare> getProgramari() {
         return programari;
     }
 
-    public void setProgramari(Programare[] programari) {
+    public void setProgramari(List<Programare> programari) {
         this.programari = programari;
     }
 }

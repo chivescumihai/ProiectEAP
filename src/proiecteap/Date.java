@@ -1,6 +1,4 @@
-package ProiectEAP;
-
-import java.time.LocalDate;
+package proiecteap;
 
 public class Date {
     private int an;
@@ -82,5 +80,9 @@ public class Date {
     public int [] getAll () {
         int [] all = {this.an, this.luna, this.ziua, this.ora, this.minut, this.secunda};
         return all;
+    }
+
+    public void showAll () {
+        System.out.println(this.getZiua()+"."+this.getLuna()+"."+this.getAn()+"   "+this.getOra()+":"+this.getMinut()+":"+this.getSecunda());
     }
 }

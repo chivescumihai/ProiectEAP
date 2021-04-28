@@ -1,4 +1,4 @@
-package ProiectEAP;
+package proiecteap;
 
 public class Programare {
     private static int nr;

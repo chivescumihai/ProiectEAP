@@ -1,13 +1,14 @@
-package ProiectEAP;
+package proiecteap;
+import java.util.List;
 
 public class Pacient implements Persoana{
     private static int nr;
     private int ID;
     private String nume;
     private int varsta;
-    private String [] afectiuni;
+    private List<String> afectiuni;
 
-    public Pacient(String nume, int varsta, String[] afectiuni) {
+    public Pacient(String nume, int varsta, List<String> afectiuni) {
         this.ID = ++nr;
         this.nume = nume;
         this.varsta = varsta;
@@ -38,11 +39,11 @@ public class Pacient implements Persoana{
         return this.ID;
     }
 
-    public String[] getAfectiuni() {
+    public List<String> getAfectiuni() {
         return this.afectiuni;
     }
 
-    public void setAfectiuni(String[] afectiuni) {
+    public void setAfectiuni(List<String> afectiuni) {
         this.afectiuni = afectiuni;
     }
 }

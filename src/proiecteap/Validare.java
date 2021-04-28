@@ -1,4 +1,4 @@
-package ProiectEAP;
+package proiecteap;
 
 
 public class Validare {
@@ -17,7 +17,7 @@ public class Validare {
         boolean numeOK = validNume(doc.getNume());
         if (numeOK == false)
         {
-            System.out.println("Nume invalid.");
+            System.out.println("Nume doctor invalid:"+doc.getNume());
             return false;
         }
 
@@ -40,7 +40,7 @@ public class Validare {
 
         if (specOK == false)
         {
-            System.out.println("Specializare doctor invalida");
+            System.out.println("Specializare doctor "+doc.getNume()+" invalida");
             return false;
         }
 
@@ -52,7 +52,7 @@ public class Validare {
 
         if (varstaOK == false)
         {
-            System.out.println("Varsta doctor invalida");
+            System.out.println("Varsta doctor "+doc.getNume()+" invalida");
             return false;
         }
 
@@ -64,7 +64,7 @@ public class Validare {
         boolean numeOK = validNume(ang.getNume());
         if (numeOK == false)
         {
-            System.out.println("Nume angajat invalid");
+            System.out.println("Nume angajat invalid: "+ang.getNume());
             return false;
         }
 
@@ -79,7 +79,7 @@ public class Validare {
 
         if (titluOK == false)
         {
-            System.out.println("Titlu angajat invalid");
+            System.out.println("Titlu angajat "+ang.getNume()+" invalid");
             return false;
         }
 
@@ -92,7 +92,7 @@ public class Validare {
 
         if (varstaOK == false)
         {
-            System.out.println("Varsta angajat invalida");
+            System.out.println("Varsta angajat "+ang.getNume()+" invalida");
             return false;
         }
 
@@ -112,7 +112,7 @@ public class Validare {
 
         if (numeOK == false)
         {
-            System.out.println("Nume sectie invalid");
+            System.out.println("Nume sectie invalid: "+sec.getNume());
             return false;
         }
 
@@ -182,7 +182,7 @@ public class Validare {
 
         if (numeOK == false)
         {
-            System.out.println("Nume laborator invalid");
+            System.out.println("Nume laborator invalid: "+lab.getNume());
             return false;
         }
 

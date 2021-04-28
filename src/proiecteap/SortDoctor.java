@@ -1,12 +1,12 @@
-package ProiectEAP;
-import javax.print.Doc;
+package proiecteap;
 import java.util.Comparator;
 
 
 public class SortDoctor implements Comparator<Doctor>{
 
     @Override
-    public int compare(Doctor d1, Doctor d2) {
+    public int compare(Doctor d1, Doctor d2)
+    {
         return d1.getNume().compareTo(d2.getNume());
     }
 }

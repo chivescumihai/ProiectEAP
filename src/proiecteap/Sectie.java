@@ -1,13 +1,10 @@
-package ProiectEAP;
+package proiecteap;
+import java.util.List;
 
 public class Sectie extends Post {
-    private String nume;
-    private String [] specAngajati;
-    private Doctor[] doctori;
-    private Angajat [] angajati;
     private int maxPacienti;
 
-    public Sectie(String nume, String[] specAngajati, Doctor[] doctori, Angajat[] angajati, int maxPacienti) {
+    public Sectie(String nume, List<String> specAngajati, List<Doctor> doctori, List<Angajat> angajati, int maxPacienti) {
         super(nume, specAngajati, doctori, angajati);
         this.maxPacienti = maxPacienti;
     }

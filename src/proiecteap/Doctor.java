@@ -1,4 +1,4 @@
-package ProiectEAP;
+package proiecteap;
 
 public class Doctor implements Persoana {
     private static int nr;
