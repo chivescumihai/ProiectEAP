@@ -1,10 +1,9 @@
-package proiecteap;
+package proiecteap.servicii;
 
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName;
+import proiecteap.clase.Date;
+import proiecteap.clase.Doctor;
 
-import javax.print.Doc;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,9 +11,6 @@ public class Main {
     public static void main(String [] args) throws IOException {
         Validare validare = new Validare();
         Service service = new Service();
-        DateService dS = DateService.getInstance();
-        Date da = new Date(2021, 10, 15, 12, 0, 0);
-
 
 /*
 
@@ -99,25 +95,48 @@ public class Main {
 
  */
 
-    //Test citire date din fisier
+        DateService dateService = DateService.getInstance();
+        DoctorService doctorService = DoctorService.getInstance();
+
+        //Test citire si afisare date din/in fisier
+/*
+//Citire
     List<Date> testDateIn = new ArrayList<Date>();
-    String filepath = "E:\\Fac\\Anul II\\Sem II\\Elemente Avansate de Programare\\Proiect\\datein.csv";
-    testDateIn = dS.citireDate(filepath);
+    String dateFilepath = "E:\\Fac\\Anul II\\Sem II\\Elemente Avansate de Programare\\Proiect\\Fisiere CSV\\datein.csv";
+    testDateIn = dateService.citireDate(dateFilepath);
         for (Date d:testDateIn)
         {
             d.showAll();
         }
 
-    //Test afisare date in fisier
+//Afisare
         List<Date> testDateOut = new ArrayList<Date>();
-        Date dOut1 = new Date (2021, 4, 13, 10, 0, 0);
-        Date dOut2 = new Date (2021, 5, 6, 15, 45, 30);
-        service.addDate(testDateOut, dOut1);
-        service.addDate(testDateOut, dOut2);
+        Date dateOut1 = new Date (2021, 4, 13, 10, 0, 0);
+        Date dateOut2 = new Date (2021, 5, 6, 15, 45, 30);
+        service.addDate(testDateOut, dateOut1);
+        service.addDate(testDateOut, dateOut2);
 
-        dS.afisareDate(testDateOut);
+        dateService.afisareDate(testDateOut);
+*/
 
+        //Test citire si afisare doctori din/in fisier
 
+    List<Doctor> testDoctoriIn = new ArrayList<Doctor>();
+    String doctorFilepath = "E:\\Fac\\Anul II\\Sem II\\Elemente Avansate de Programare\\Proiect\\Fisiere CSV\\doctorin.csv";
+    testDoctoriIn = doctorService.citireDoctori(doctorFilepath);
+        for (Doctor d: testDoctoriIn)
+        {
+            d.getDetails();
+        }
+
+        Doctor docOut1 = new Doctor("Andrei Parvulescu", "Ortoped", 54);
+        Doctor docOut2 = new Doctor("Miruna Tibrea", "Neurochirurg", 32);
+        List<Doctor> testDoctorOut = new ArrayList<Doctor>();
+        service.addDoctor(testDoctorOut, docOut1);
+        service.addDoctor(testDoctorOut, docOut2);
+
+        doctorService.afisareDoctori(testDoctorOut);
 
     }
+
 }

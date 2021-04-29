@@ -1,4 +1,5 @@
-package proiecteap;
+package proiecteap.servicii;
+import proiecteap.clase.*;
 
 
 public class Validare {

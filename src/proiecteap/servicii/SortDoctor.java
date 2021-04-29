@@ -1,4 +1,6 @@
-package proiecteap;
+package proiecteap.servicii;
+import proiecteap.clase.Doctor;
+
 import java.util.Comparator;
 
 

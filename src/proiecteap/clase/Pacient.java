@@ -1,4 +1,4 @@
-package proiecteap;
+package proiecteap.clase;
 import java.util.List;
 
 public class Pacient implements Persoana{

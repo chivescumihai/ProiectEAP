@@ -1,4 +1,4 @@
-package proiecteap;
+package proiecteap.clase;
 
 public class Angajat implements Persoana{
     private String nume;
@@ -40,7 +40,7 @@ public class Angajat implements Persoana{
         this.titlu = titlu;
     }
 
-    void getDetails(){
+    public void getDetails(){
         System.out.println("Nume angajat : "+this.nume);
         System.out.println("Varsta angajat : "+this.varsta);
         System.out.println("Titlu angajat : "+this.titlu);

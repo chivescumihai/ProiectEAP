@@ -1,4 +1,4 @@
-package proiecteap;
+package proiecteap.clase;
 
 public class Doctor implements Persoana {
     private static int nr;
@@ -37,23 +37,23 @@ public class Doctor implements Persoana {
         return this.varsta;
     }
 
-    int getID(){
+    public int getID(){
         return this.ID;
     }
 
-    void setSpecializare(String spec){
+    public void setSpecializare(String spec){
         this.specializare = spec;
     }
 
-    String getSpecializare(){
+    public String getSpecializare(){
         return this.specializare;
     }
 
-    void getDetails(){
-        System.out.println("Nume doctor : "+this.nume);
+    public void getDetails(){
         System.out.println("ID Doctor : "+this.ID);
-        System.out.println("Varsta doctor : "+this.varsta);
+        System.out.println("Nume doctor : "+this.nume);
         System.out.println("Specializare doctor : "+this.specializare);
+        System.out.println("Varsta doctor : "+this.varsta);
         System.out.println();
     }
 

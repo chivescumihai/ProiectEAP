@@ -1,10 +1,8 @@
-package proiecteap;
+package proiecteap.servicii;
+import proiecteap.clase.Date;
+
 import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.sql.Timestamp;
 import java.util.*;
-import java.util.stream.Collectors;
 
 
 public class DateService {
@@ -42,7 +40,7 @@ public class DateService {
                     sec = Integer.parseInt(stringTokenizer.nextToken());
 
                     Date aux = new Date(an, luna, zi, ora, minut, sec);
-                    d.add(aux);
+                    service.addDate(d, aux);
                 }
 
             }
@@ -58,7 +56,7 @@ public class DateService {
     }
 
     public void afisareDate (List<Date> dates) {
-        File file = new File("E:\\Fac\\Anul II\\Sem II\\Elemente Avansate de Programare\\Proiect\\dateout.csv");
+        File file = new File("E:\\Fac\\Anul II\\Sem II\\Elemente Avansate de Programare\\Proiect\\Fisiere CSV\\dateout.csv");
 
         try {
             FileWriter fw = new FileWriter(file, true);

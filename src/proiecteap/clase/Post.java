@@ -1,5 +1,4 @@
-package proiecteap;
-import javax.print.Doc;
+package proiecteap.clase;
 import java.util.List;
 
 public class Post {

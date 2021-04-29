@@ -1,4 +1,4 @@
-package proiecteap;
+package proiecteap.clase;
 
 interface Persoana {
     void setNume(String nume);
