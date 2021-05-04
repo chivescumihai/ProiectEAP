@@ -1,28 +1,28 @@
 package proiecteap.servicii;
-import proiecteap.clase.Doctor;
-import proiecteap.clase.Doctor;
 
-import javax.print.Doc;
+import proiecteap.clase.Angajat;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class DoctorService {
+public class AngajatService {
     Service service = new Service();
-    private static DoctorService doctorService = new DoctorService();
 
-    private DoctorService() {
+    private static AngajatService angajatService = new AngajatService();
+
+    private AngajatService() {
     }
 
     ;
 
-    public static DoctorService getInstance() {
-        return doctorService;
+    public static AngajatService getInstance() {
+        return angajatService;
     }
 
-    public List<Doctor> citireDoctori (String filepath) {
-        ArrayList<Doctor> d = new ArrayList<Doctor>();
+    public List<Angajat> citireAngajati (String filepath) {
+        ArrayList<Angajat> a = new ArrayList<Angajat>();
         int i = 0;
 
         try{
@@ -34,14 +34,14 @@ public class DoctorService {
             {
                 StringTokenizer stringTokenizer = new StringTokenizer(line, delimiter);
                 while (stringTokenizer.hasMoreTokens()) {
-                    String nume, specializare;
+                    String nume, titlu;
                     int varsta;
                     nume = stringTokenizer.nextToken();
-                    specializare = stringTokenizer.nextToken();
+                    titlu = stringTokenizer.nextToken();
                     varsta = Integer.parseInt(stringTokenizer.nextToken());
 
-                    Doctor aux = new Doctor(nume, specializare, varsta);
-                    service.addDoctor(d, aux);
+                    Angajat aux = new Angajat(nume, titlu, varsta);
+                    service.addAngajat(a, aux);
                 }
 
             }
@@ -53,22 +53,21 @@ public class DoctorService {
             e.printStackTrace();
         }
 
-        return d;
+        return a;
     }
 
-    public void afisareDoctori (List<Doctor> doctori) {
-        File file = new File("E:\\Fac\\Anul II\\Sem II\\Elemente Avansate de Programare\\Proiect\\Fisiere CSV\\doctorout.csv");
+    public void afisareAngajati (List<Angajat> angajati) {
+        File file = new File("E:\\Fac\\Anul II\\Sem II\\Elemente Avansate de Programare\\Proiect\\Fisiere CSV\\angajatout.csv");
 
         try {
             FileWriter fw = new FileWriter(file, true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
-            for (Doctor d: doctori)
+            for (Angajat d: angajati)
             {
-                pw.append("ID: "+d.getID()+"\n");
                 pw.append("Nume :"+d.getNume()+"\n");
-                pw.append("Specializare :"+d.getSpecializare()+"\n");
-                pw.append("Varsta : "+d.getVarsta()+"\n\n");
+                pw.append("Specializare :"+d.getTitlu()+"\n");
+                pw.append("Varsta : "+d.getVarsta()+"\n");
             }
             pw.flush();
             pw.close();
@@ -76,6 +75,4 @@ public class DoctorService {
             e.printStackTrace();
         }
     }
-
-
 }

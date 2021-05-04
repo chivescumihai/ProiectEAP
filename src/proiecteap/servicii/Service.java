@@ -55,6 +55,17 @@ public class Service {
             validare.validLab(l);
     }
 
+    public void addPacient(List<Pacient> v, Pacient p) throws IOException{
+        boolean pacientOK = validare.validPacient(p);
+        if(pacientOK==true)
+        {
+            v.add(p);
+            aS.scrie("addPacient");
+        }
+        else
+            validare.validPacient(p);
+    }
+
     public void addProgramare(List<Programare> v, Programare p) throws IOException {
         boolean progOK = validare.validProgramare(p);
         if (progOK == true)

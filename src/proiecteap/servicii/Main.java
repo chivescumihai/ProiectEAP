@@ -1,7 +1,9 @@
 package proiecteap.servicii;
 
+import proiecteap.clase.Angajat;
 import proiecteap.clase.Date;
 import proiecteap.clase.Doctor;
+import proiecteap.clase.Pacient;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -97,6 +99,8 @@ public class Main {
 
         DateService dateService = DateService.getInstance();
         DoctorService doctorService = DoctorService.getInstance();
+        AngajatService angajatService = AngajatService.getInstance();
+        PacientService pacientService = PacientService.getInstance();
 
         //Test citire si afisare date din/in fisier
 /*
@@ -120,7 +124,9 @@ public class Main {
 */
 
         //Test citire si afisare doctori din/in fisier
+/*
 
+//Citire
     List<Doctor> testDoctoriIn = new ArrayList<Doctor>();
     String doctorFilepath = "E:\\Fac\\Anul II\\Sem II\\Elemente Avansate de Programare\\Proiect\\Fisiere CSV\\doctorin.csv";
     testDoctoriIn = doctorService.citireDoctori(doctorFilepath);
@@ -129,6 +135,8 @@ public class Main {
             d.getDetails();
         }
 
+
+//Afisare
         Doctor docOut1 = new Doctor("Andrei Parvulescu", "Ortoped", 54);
         Doctor docOut2 = new Doctor("Miruna Tibrea", "Neurochirurg", 32);
         List<Doctor> testDoctorOut = new ArrayList<Doctor>();
@@ -136,6 +144,42 @@ public class Main {
         service.addDoctor(testDoctorOut, docOut2);
 
         doctorService.afisareDoctori(testDoctorOut);
+*/
+
+        //Test citire si afisare angajati din/in fisier
+/*
+//Citire
+    List<Angajat> testAngajatIn = new ArrayList<Angajat>();
+    String angajatFilepath = "E:\\Fac\\Anul II\\Sem II\\Elemente Avansate de Programare\\Proiect\\Fisiere CSV\\angajatin.csv";
+    testAngajatIn = angajatService.citireAngajati(angajatFilepath);
+        for (Angajat a: testAngajatIn)
+        {
+            a.getDetails();
+        }
+
+//Afisare
+    Angajat angOut1 = new Angajat("Mircea Andreescu", "Om de serviciu", 54);
+    Angajat angOut2 = new Angajat("Madalina Marinescu", "Asistent", 21);
+    List testAngajatOut = new ArrayList<Angajat>();
+    service.addAngajat(testAngajatOut, angOut1);
+    service.addAngajat(testAngajatOut, angOut2);
+
+    angajatService.afisareAngajati(testAngajatOut);
+*/
+
+        //Test citire si afisare pacienti din/in fisier
+
+//Citire
+    List<Pacient> testPacientIn = new ArrayList<Pacient>();
+    String pacientFilepath = "E:\\Fac\\Anul II\\Sem II\\Elemente Avansate de Programare\\Proiect\\Fisiere CSV\\pacientin.csv";
+    testPacientIn = pacientService.citirePacienti(pacientFilepath);
+    for (Pacient p: testPacientIn)
+    {
+        p.getDetails();
+    }
+
+//Afisare
+
 
     }
 

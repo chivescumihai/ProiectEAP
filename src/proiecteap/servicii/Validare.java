@@ -12,7 +12,7 @@ public class Validare {
 
     public boolean validNume (String nume) {
         return nume.matches("(^[A-Z][a-z]+ [A-Z][a-z]+$)|(^[A-Z][a-z]+ [A-Z][a-z]+ [A-Z][a-z]+$)|(^[A-Z][a-z]+ [A-Z][a-z]+ [A-Z][a-z]+ [A-Z][a-z]+$)");
-    };
+    }
 
     public boolean validDoctor (Doctor doc) {
         boolean numeOK = validNume(doc.getNume());
@@ -72,9 +72,9 @@ public class Validare {
         boolean titluOK = false;
         for (String i:exempleAngajati)
         {
-            if (ang.getTitlu().equals(i))
-            {
+            if (ang.getTitlu().equals(i)) {
                 titluOK = true;
+                break;
             }
         }
 
@@ -364,6 +364,19 @@ public class Validare {
         if (numeOK == false)
         {
             System.out.println("Numele pacientului "+p.getNume()+" este necorespunzator.");
+            return false;
+        }
+
+        boolean varstaOK = false;
+
+        if (p.getVarsta() > 0)
+        {
+            varstaOK = true;
+        }
+
+        if (varstaOK == false)
+        {
+            System.out.printf("Varsta pacientului "+p.getNume()+" este invalida : "+p.getVarsta());
             return false;
         }
 

@@ -46,4 +46,16 @@ public class Pacient implements Persoana{
     public void setAfectiuni(List<String> afectiuni) {
         this.afectiuni = afectiuni;
     }
+
+    public void getDetails() {
+        System.out.println("ID : "+this.ID);
+        System.out.println("Nume : "+this.getNume());
+        System.out.println("Varsta : "+this.getVarsta());
+        System.out.print("Afectiuni : ");
+        for (String s:this.getAfectiuni())
+        {
+            System.out.print(s+"  ");
+        }
+        System.out.println();
+    }
 }
