@@ -179,6 +179,14 @@ public class Main {
     }
 
 //Afisare
+    List<String> af = new ArrayList<String>();
+    af.add("Insomnie");
+    af.add("Gripa");
+    Pacient pacOut = new Pacient("Mihai Baciu", 35, af);
+
+    List<Pacient> testPacientOut = new ArrayList<Pacient>();
+    service.addPacient(testPacientOut, pacOut);
+    pacientService.afisarePacienti(testPacientOut);
 
 
     }
