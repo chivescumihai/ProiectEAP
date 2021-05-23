@@ -8,6 +8,8 @@ public class Pacient implements Persoana{
     private int varsta;
     private List<String> afectiuni;
 
+    public Pacient(){};
+
     public Pacient(String nume, int varsta, List<String> afectiuni) {
         this.ID = ++nr;
         this.nume = nume;
@@ -18,6 +20,7 @@ public class Pacient implements Persoana{
 
     @Override
     public void setNume(String nume) {
+        this.nume = nume;
     }
 
     @Override
@@ -33,6 +36,10 @@ public class Pacient implements Persoana{
     @Override
     public int getVarsta() {
         return this.varsta;
+    }
+
+    public void setID(int id) {
+        this.ID = id;
     }
 
     public int getID() {

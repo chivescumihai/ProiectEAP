@@ -1,0 +1,61 @@
+insertDoctor (1, Alexandru Georgescu, Cardiolog, 56ani)   2021-05-23 17:04:00.963
+insertDoctor (2, Cosmin Petcu, Oftalmolog, 34ani)   2021-05-23 17:04:02.361
+selectDoctori()   2021-05-23 17:04:02.393
+deleteDoctor (0, Cosmin Petcu, null, 0ani)   2021-05-23 17:04:02.428
+updateDoctor (1, null, null, 0 ani)  -->  (6, Paul Marin, Ortoped, 44 ani)   2021-05-23 17:04:02.458
+insertAfectiune (otita)   2021-05-23 17:05:34.743
+insertAfectiune (pojar)   2021-05-23 17:05:36.108
+selectAfectiuni()   2021-05-23 17:05:36.138
+deleteAfectiune (pojar)   2021-05-23 17:05:36.168
+insertAfectiune (grip)   2021-05-23 17:05:36.203
+updateAfectiune (grip) -->  (gripa)   2021-05-23 17:05:36.228
+insertAngajat (1, Andrei Popescu, Gardian, 28ani)   2021-05-23 17:15:48.962
+insertAngajat (1, Andrei Popescu, Gardian, 28ani)   2021-05-23 17:25:45.056
+insertAngajat (1, Andrei Popescu, Gardian, 28ani)   2021-05-23 17:26:10.298
+insertAngajat (2, Daniela Parvulescu, Asistent, 31ani)   2021-05-23 17:26:11.72
+selectAngajati()   2021-05-23 17:29:39.209
+selectAngajati()   2021-05-23 17:30:14.981
+deleteAngajat (0, null, Gardian, 0ani)   2021-05-23 17:34:02.651
+insertAngajat (1, George Lucaci, Gardian, 35ani)   2021-05-23 17:44:30.468
+insertAngajat (1, George Lucaci, Gardian, 35ani)   2021-05-23 17:51:57.226
+updateAngajat (1, George Lucaci, Gardian, 35 ani)  -->  (2, George Lucaci, Receptioner, 35 ani)   2021-05-23 17:51:58.596
+insertAngajat (1, Andrei Popescu, Gardian, 28ani)   2021-05-23 17:52:46.061
+insertAngajat (2, Daniela Parvulescu, Asistent, 31ani)   2021-05-23 17:52:47.436
+selectAngajati()   2021-05-23 17:52:47.466
+deleteAngajat (0, null, Gardian, 0ani)   2021-05-23 17:52:47.506
+insertAngajat (5, George Lucaci, Gardian, 35ani)   2021-05-23 17:52:47.541
+updateAngajat (5, George Lucaci, Gardian, 35 ani)  -->  (6, George Lucaci, Receptioner, 35 ani)   2021-05-23 17:52:47.576
+insertPacient (1, Gheorghe Marinescu, 62ani)   2021-05-23 19:34:04.306
+insertPacient (1, Gheorghe Marinescu, 62ani)   2021-05-23 19:36:14.479
+insertPacient (2, Marinela Burlacu, 65ani)   2021-05-23 19:36:15.903
+selectPacienti()   2021-05-23 20:01:31.058
+selectPacienti()   2021-05-23 20:02:45.073
+selectPacienti()   2021-05-23 20:04:19.889
+selectPacienti()   2021-05-23 20:04:34.708
+selectPacienti()   2021-05-23 20:06:50.211
+selectPacienti()   2021-05-23 20:09:46.275
+selectPacienti()   2021-05-23 20:10:42.615
+selectPacienti()   2021-05-23 20:11:51.774
+selectPacienti()   2021-05-23 20:19:02.112
+selectPacienti()   2021-05-23 20:21:34.411
+insertPacient (1, Gheorghe Marinescu, 62ani)   2021-05-23 20:34:00.836
+insertPacient (1, Gheorghe Marinescu, 62ani)   2021-05-23 20:34:31.121
+insertPacient (2, Marinela Burlacu, 65ani)   2021-05-23 20:34:32.511
+insertPacient (1, Gheorghe Marinescu, 62ani)   2021-05-23 20:37:32.89
+insertPacient (1, Gheorghe Marinescu, 62ani)   2021-05-23 20:38:00.476
+insertPacient (1, Gheorghe Marinescu, 62ani)   2021-05-23 20:38:23.04
+insertPacient (1, Gheorghe Marinescu, 62ani)   2021-05-23 20:39:16.88
+insertPacient (2, Marinela Burlacu, 65ani)   2021-05-23 20:39:18.29
+insertPacient (1, Gheorghe Marinescu, 62ani)   2021-05-23 20:40:07.019
+insertPacient (2, Marinela Burlacu, 65ani)   2021-05-23 20:40:08.449
+insertPacient (1, Gheorghe Marinescu, 62ani)   2021-05-23 20:42:16.179
+insertPacient (2, Marinela Burlacu, 65ani)   2021-05-23 20:42:17.689
+selectPacienti()   2021-05-23 20:43:01.879
+deletePacient (0, null, 0ani)   2021-05-23 20:56:11.039
+deletePacient (0, null, 0ani)   2021-05-23 20:56:29.728
+insertPacient (1, Gheorghe Marinescu, 62ani)   2021-05-23 20:58:05.093
+insertPacient (2, Marinela Burlacu, 65ani)   2021-05-23 20:58:06.481
+deletePacient (0, Gheorghe Marinescu, 0ani)   2021-05-23 20:58:06.522
+insertPacient (1, Vladimir Popovici, 67ani)   2021-05-23 21:37:17.646
+updatePacient (0, Vladimir Popovici, 0 ani)  -->  (2, Vladimir Pop, 64 ani)   2021-05-23 21:37:19.165
+insertPacient (1, Vladimir Popovici, 67ani)   2021-05-23 21:38:11.355

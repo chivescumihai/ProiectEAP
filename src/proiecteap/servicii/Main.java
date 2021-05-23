@@ -1,9 +1,6 @@
 package proiecteap.servicii;
 
-import proiecteap.clase.Angajat;
-import proiecteap.clase.Date;
-import proiecteap.clase.Doctor;
-import proiecteap.clase.Pacient;
+import proiecteap.clase.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -14,8 +11,8 @@ public class Main {
         Validare validare = new Validare();
         Service service = new Service();
 
+    //Teste introducere date etapa I
 /*
-
         //Date, zile, ore
         Date data1 = new Date(2021, 11, 15, 12, 30, 0);
         Date data2 = new Date(2021, 5, 6, 15, 0,0 );
@@ -95,12 +92,19 @@ public class Main {
             i.getDetails();
         }
 
- */
+        for(Angajat a: angLab1)
+        {
+            a.getDetails();
+        }
+
+*/
 
         DateService dateService = DateService.getInstance();
         DoctorService doctorService = DoctorService.getInstance();
         AngajatService angajatService = AngajatService.getInstance();
         PacientService pacientService = PacientService.getInstance();
+
+        // Teste fisiere CSV etapa II
 
         //Test citire si afisare date din/in fisier
 /*
@@ -168,7 +172,7 @@ public class Main {
 */
 
         //Test citire si afisare pacienti din/in fisier
-
+/*
 //Citire
     List<Pacient> testPacientIn = new ArrayList<Pacient>();
     String pacientFilepath = "E:\\Fac\\Anul II\\Sem II\\Elemente Avansate de Programare\\Proiect\\Fisiere CSV\\pacientin.csv";
@@ -187,7 +191,7 @@ public class Main {
     List<Pacient> testPacientOut = new ArrayList<Pacient>();
     service.addPacient(testPacientOut, pacOut);
     pacientService.afisarePacienti(testPacientOut);
-
+*/
 
     }
 

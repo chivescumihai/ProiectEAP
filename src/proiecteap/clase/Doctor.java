@@ -7,7 +7,7 @@ public class Doctor implements Persoana {
     private String specializare;
     private int varsta;
 
-
+    public Doctor(){};
 
     public Doctor(String nume, String specializare, int varsta) {
         this.ID = ++nr;
@@ -19,7 +19,7 @@ public class Doctor implements Persoana {
 
     @Override
     public void setNume(String s) {
-        this.nume = nume;
+        this.nume = s;
     }
 
     @Override
@@ -29,12 +29,16 @@ public class Doctor implements Persoana {
 
     @Override
     public void setVarsta(int v) {
-        this.varsta = varsta;
+        this.varsta = v;
     }
 
     @Override
     public int getVarsta() {
         return this.varsta;
+    }
+
+    public void setID(int nr) {
+        this.ID = nr;
     }
 
     public int getID(){
