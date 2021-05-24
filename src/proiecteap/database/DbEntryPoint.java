@@ -134,9 +134,11 @@ public class DbEntryPoint {
         afectiuniP2.add("artrita");
         Pacient p1 = new Pacient("Gheorghe Marinescu", 62, afectiuniP1);
         Pacient p2 = new Pacient("Marinela Burlacu", 65, afectiuniP2);
+        Pacient p3 = new Pacient("Alexandru Vasilescu", 54, afectiuniP2);
 
         pacientRepository.insertPacient(p1);
         pacientRepository.insertPacient(p2);
+        pacientRepository.insertPacient(p3);
 
 
         //SELECT

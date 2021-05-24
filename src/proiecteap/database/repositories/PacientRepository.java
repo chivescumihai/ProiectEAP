@@ -25,13 +25,37 @@ public class PacientRepository {
         try
         {
             Connection connection = DriverManager.getConnection(urlDB, username, pass);
-            String queryAfectiuni = "INSERT INTO AFECTIUNI(nume) VALUES (?)";
-            PreparedStatement preparedStatementAfectiuni = connection.prepareStatement(queryAfectiuni, Statement.RETURN_GENERATED_KEYS);
-            for (String af:p.getAfectiuni()) {
-                preparedStatementAfectiuni.setString(1, af);
-                preparedStatementAfectiuni.execute();
+
+            List<String> allAfectiuni = new ArrayList<>();
+
+            String queryAllAfectiuni = "SELECT * FROM AFECTIUNI";
+            PreparedStatement preparedStatementVerif = connection.prepareStatement(queryAllAfectiuni);
+            ResultSet resultSet = preparedStatementVerif.executeQuery(queryAllAfectiuni);
+
+            while(!resultSet.isClosed() && resultSet.next()) {
+
+                String nume;
+                nume = resultSet.getString("nume");
+
+                allAfectiuni.add(nume);
             }
 
+            for (String checkAf:p.getAfectiuni()) {
+                boolean isAdded = false;
+
+                for (String allAf : allAfectiuni) {
+                    if (checkAf.equals(allAf)) {
+                        isAdded = true;
+                    }
+                }
+
+                if (isAdded == false) {
+                    String queryAfectiuni = "INSERT INTO AFECTIUNI(nume) VALUES (?)";
+                    PreparedStatement preparedStatementAfectiuni = connection.prepareStatement(queryAfectiuni, Statement.RETURN_GENERATED_KEYS);
+                        preparedStatementAfectiuni.setString(1, checkAf);
+                        preparedStatementAfectiuni.execute();
+                }
+            }
 
             String query = "INSERT INTO PACIENTI(id, nume, varsta) VALUES(?, ?, ?)";
 

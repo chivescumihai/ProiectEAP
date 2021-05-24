@@ -59,3 +59,18 @@ deletePacient (0, Gheorghe Marinescu, 0ani)   2021-05-23 20:58:06.522
 insertPacient (1, Vladimir Popovici, 67ani)   2021-05-23 21:37:17.646
 updatePacient (0, Vladimir Popovici, 0 ani)  -->  (2, Vladimir Pop, 64 ani)   2021-05-23 21:37:19.165
 insertPacient (1, Vladimir Popovici, 67ani)   2021-05-23 21:38:11.355
+insertPacient (1, Gheorghe Marinescu, 62ani)   2021-05-23 22:25:54.147
+insertPacient (1, Gheorghe Marinescu, 62ani)   2021-05-23 22:27:09.716
+insertPacient (1, Gheorghe Marinescu, 62ani)   2021-05-23 22:28:27.064
+insertPacient (1, Gheorghe Marinescu, 62ani)   2021-05-23 22:30:06.264
+insertPacient (2, Marinela Burlacu, 65ani)   2021-05-23 22:30:07.693
+insertPacient (1, Gheorghe Marinescu, 62ani)   2021-05-24 10:00:45.702
+insertPacient (1, Gheorghe Marinescu, 62ani)   2021-05-24 10:26:07.823
+insertPacient (2, Marinela Burlacu, 65ani)   2021-05-24 10:26:09.38
+insertPacient (1, Gheorghe Marinescu, 62ani)   2021-05-24 10:26:15.323
+insertPacient (1, Gheorghe Marinescu, 62ani)   2021-05-24 10:27:05.088
+insertPacient (1, Gheorghe Marinescu, 62ani)   2021-05-24 10:27:16.874
+insertPacient (2, Marinela Burlacu, 65ani)   2021-05-24 10:27:18.336
+insertPacient (1, Gheorghe Marinescu, 62ani)   2021-05-24 10:27:49.379
+insertPacient (2, Marinela Burlacu, 65ani)   2021-05-24 10:27:50.806
+insertPacient (3, Alexandru Vasilescu, 54ani)   2021-05-24 10:27:50.867
